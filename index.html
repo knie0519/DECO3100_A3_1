@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+
+    <script defer src="plotly-latest.min.js"></script>
+    <script defer src="final+css.js"></script>
+    
+    
+</head>
+<body>
+	<div class="header">
+		<div id="title">
+			<h>DECO3100 Assessment 3</h>
+		</div>
+	</div>
+
+
+
+<div class="line">
+	<div class="tooltip"  >
+
+	<input class="toggle" type="checkbox" id="switch" />
+
+	<span class="tooltiptext" id="tipForSwitch">Switch Graph Type</span>
+
+
+	</div>
+
+</div>
+
+    
+<div class="line2">
+  
+    <div class="buttons" id="year-wrapper">
+    
+    <div class="section over-hide z-bigger">
+		<div class="section over-hide z-bigger">
+			<div class="container pb-5">
+				<div class="row justify-content-center pb-5">
+					<div class="col-12 pb-5">
+						<div class="tooltip"  >
+						<input class="checkbox-tools" type="radio" name="tools" id="tool-1" checked>
+						<label class="for-checkbox-tools" for="tool-1">							
+							2019
+						</label>
+					
+						<!--
+						--><input class="checkbox-tools" type="radio" name="tools" id="tool-2">
+						<label class="for-checkbox-tools" for="tool-2">
+						
+							2018
+						</label><!--
+
+
+						--><input class="checkbox-tools" type="radio" name="tools" id="tool-3">
+						<label class="for-checkbox-tools" for="tool-3">
+							
+							2017
+						</label><!--
+
+
+						--><input class="checkbox-tools" type="radio" name="tools" id="tool-4">
+						<label class="for-checkbox-tools" for="tool-4">							
+							2016
+						</label><!--
+
+
+						--><input class="checkbox-tools" type="radio" name="tools" id="tool-5">
+						<label class="for-checkbox-tools" for="tool-5">
+							
+							2015
+						</label>
+
+
+						<span class="tooltiptext" >Select Year</span>
+					</div>
+				
+					
+				</div>
+			</div>	
+		</div>
+	</div>
+	</div>  
+	
+</div> 
+
+
+    <div class="buttons" id="select-wrapper">
+		<div class="tooltip" >
+        <div class="box">
+		<select name="factor-selector" id="factor-selector"></select>
+		<span class="tooltiptext">Select one factor</span>
+		</div>
+		</div>
+    </div>
+    
+
+    <div class="buttons" id="function-wrapper">
+
+		
+		<div class="tooltip" >
+			<ul>
+			  <li ><a href="#"id="saveImage" ><i class="fa fa-photo" aria-hidden="true"></i></a></li>
+			  <span class="tooltiptext">Save Canvas</span>
+
+			</ul>
+			
+		</div>
+
+		<div class="tooltip" >
+
+			<ul>
+				<li><a href="#" id="clean" ><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+				<span class="tooltiptext">Clean Canvas</span>
+			</ul>	 
+		</div>
+
+		<div class="tooltip" >
+			<ul>
+			  <li ><a href="https://www.kaggle.com/unsdsn/world-happiness" ><i class="	fa fa-external-link" aria-hidden="true"></i></a></li>
+			  <span class="tooltiptext">Original data source</span>
+
+			</ul>
+			
+		</div>
+			
+    </div>  
+
+</div>
+
+  
+
+    
+<hr style="width:100%;text-align:left;margin-left:0;border-width:0px">
+
+
+<div id="data"></div>
+
+
+<hr style="width:100%;text-align:left;margin-left:0;border-width:0px">
+
+
+<div class="line3">
+
+
+	<div class="text1" id="data-source" >
+		<p><b>GDP: &nbsp</b>The extent to which GDP contributes to the calculation of the Happiness Score</p>
+		<p><b> Life expectancy: &nbsp</b>The extent to which Life expectancy contributed to the calculation of the Happiness Score</p>
+		<p><b>Freedom: &nbsp</b>The extent to which Freedom contributed to the calculation of the Happiness Score.</p>
+		<p><b>Generosity: &nbsp</b>The extent to which Generosity contributed to the calculation of the Happiness Score.</p>
+		<p><b>Perceptions of Correption: &nbsp</b>The extent to which Perception of Corruption contributes to Happiness Score.</p>
+	</div>
+
+
+	<div class="text1"  >
+			
+
+		<p><b>Data Calculation: &nbsp1)</b>  We recalculated the original data by squaring to represent the bubble area, the numbers in the annotations are original data.</p>
+		<p><b>2)</b>We did data mapping for each factor in the range of 5 years. It means you can compare the bubble size in different years in the same factor, 
+			but the criteria are different across factors.</p>
+
+		<a href="https://www.kaggle.com/unsdsn/world-happiness"><b>More details about the data, please check the original source</b></a>
+		
+</div>
+</div>
+	
+
+
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <img id="jpg-export"></img>
+	  
+	</div>
+  
+  </div>
+
+
+   
+    
+</body>
+</html>

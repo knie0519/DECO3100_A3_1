@@ -1,0 +1,385 @@
+:root {
+	--dark-green:#026670;
+	--mid-green: #9fedd7;
+	--black-green: #35484A;
+	--white: #fff;
+    --yellow: #fce181;
+    --light-yellow: #fef9c7;
+	--grey: #edeae5;
+}
+
+
+
+html{
+    background:#043538;
+    font-family: 'ABeeZee';
+    
+}
+
+.header{
+    height: 50px;
+}
+
+#title{
+    padding-top: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 20px;
+    color: var(--white);
+}
+
+
+.line {
+    float: left;
+    width: 15%;
+    height: 80px;
+    text-align: center;
+    background:var(--grey);
+}
+
+.line2 {
+   
+    float: left;
+    width: 85%;
+    height: 80px;
+    background:var(--grey);
+}
+.text1 p{margin: 8px 0} 
+
+.line3 {
+    float: left;
+    width: 100%;
+    height: 120px;
+    background:var(--grey);
+}
+
+
+.line3 .text1{
+    float: left;
+    width: 47%;
+    text-align: left;
+    margin: 2px 18px;
+    font-size: 12px;
+    font-family: helvetica;
+    color: rgba(55, 55, 55);
+    
+
+}
+
+.line3 .text1 a{
+    
+    color: rgba(55, 55, 55);
+
+}
+
+
+
+#data-source{
+    font-size: 12px;
+   
+}
+
+
+.buttons {
+    margin-top: 20px;
+    float: left;
+   
+    height: 60px;  
+    text-align: center;
+}
+
+#select-wrapper{
+    width: 41.2%;
+
+
+}
+
+#year-wrapper{
+    width: 41.2%;    
+}
+
+
+#function-wrapper{   
+    width: 17.59%;    
+}
+
+
+#data {
+    width: 100%;
+}
+
+select {
+  
+    border: 0;
+    width: 200px;
+    height: 36px;
+    border-radius: 4px;
+    background: var(--white);
+    cursor: pointer;
+    text-align: center;
+    padding: 0px 0px 0px 10px;
+    color: var(--black-green);
+}
+
+
+select:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    border-bottom: 5px;
+}
+
+
+
+.buttons  ul {  
+    display:flex; 
+    text-align: center;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+ 
+  display:inline-table;
+  }
+  
+.buttons ul li {
+    list-style:none;
+    margin: 0 8px;
+  }
+  
+.buttons ul li a {
+    position: relative;
+    display: block;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    line-height: 36px;
+    background: var(--white);
+    border-radius: 4px;
+    font-size: 20px;
+    color: rgb(82, 74, 63);
+    transition: .5s;
+  }
+  
+
+  .buttons ul li :havor{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    
+  }
+ 
+
+
+
+
+  .toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 130px;
+    height: 36px;
+    display: inline-block;
+    position: relative;
+    border: 3px;
+    border-radius: 4px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color:var(--dark-green);
+    transition: background-color ease 0.4s;
+    top:17px;
+  }
+
+  
+  .toggle:before {
+    content: "Scatter  Map";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 38px;
+    height: 29px;
+    background: var(--white);
+    left: 3px;
+    top: 3px;
+    border-radius: 2px;
+    font: 10px/28px Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: -70px;
+    word-spacing:80px;
+    color: var(--white);
+    
+    white-space: nowrap;
+   
+    transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.4s;
+  }
+
+  .toggle:hover:before {
+    box-shadow: 0 2px 4px rgba(235, 235, 235,0.8);
+  }
+  
+  .toggle:checked {
+    background-color: var(--dark-green);
+  }
+  
+  .toggle:checked:before {
+    left:89px;
+  }
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(55, 55, 55, 0.5);
+    color: #fff;
+    text-align: center;
+    
+    border-radius: 4px;
+    font-size: 8px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: 103%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  #tipForSwitch{
+    top: 130%;
+  }
+
+  
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+.section {
+    position: relative;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.checkbox-tools:checked + label,
+.checkbox-tools:not(:checked) + label{
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+	width: 40px;
+	font-size: 14px;
+	line-height: 15px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	margin-left: 1px;
+    margin-right: 1px;
+	text-align: center;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+	color: rgb(82, 74, 63);
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+.checkbox-tools:not(:checked) + label{
+	background-color: var(--white);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools:checked + label{
+    background-color: var(--dark-green);
+    color: var(--white);
+    
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools:not(:checked) + label:hover{
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.checkbox-tools:checked + label::before,
+.checkbox-tools:not(:checked) + label::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background-color: var(--dark-green);
+	z-index: -1;
+}
+.checkbox-tools:checked + label .uil,
+.checkbox-tools:not(:checked) + label .uil{
+	font-size: 12px;
+	line-height: 12px;
+	display: block;
+	
+}
+
+
+
+
